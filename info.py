@@ -1,4 +1,5 @@
 import re
+import os
 from os import environ
 
 id_pattern = re.compile(r'^.\d+$')
@@ -15,7 +16,7 @@ def is_enabled(value, default):
 # API_ID = environ['API_ID']
 # API_HASH = environ['API_HASH']
 # BOT_TOKEN = environ['BOT_TOKEN']
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
+BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
 
 #Your API ID from my.telegram.org
 APP_ID = int(os.environ.get("APP_ID", ""))
