@@ -10,11 +10,24 @@ def is_enabled(value, default):
     else:
         return default
 
-# Bot information
-SESSION = environ.get('SESSION', 'Media_search')
-API_ID = environ['API_ID']
-API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
+# # Bot information
+# SESSION = environ.get('SESSION', 'Media_search')
+# API_ID = environ['API_ID']
+# API_HASH = environ['API_HASH']
+# BOT_TOKEN = environ['BOT_TOKEN']
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
+
+#Your API ID from my.telegram.org
+APP_ID = int(os.environ.get("APP_ID", ""))
+
+#Your API Hash from my.telegram.org
+API_HASH = os.environ.get("API_HASH", "")
+
+#Your db channel Id
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ""))
+
+#OWNER ID
+OWNER_ID = int(os.environ.get("OWNER_ID", ""))
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
